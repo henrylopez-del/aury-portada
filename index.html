@@ -121,7 +121,8 @@ a{text-decoration:none;color:inherit;}
 /* hero v4 — copia literal del collage: pinguino + cards translucidas */
 .hero-visual{position:relative;display:flex;align-items:center;justify-content:center;}
 .hero-peng2{height:clamp(576px,91vh,864px);width:auto;z-index:2;filter:drop-shadow(0 26px 44px rgba(11,27,60,.16));}
-.gcard{position:absolute;background:#fff;border:1px solid var(--line);box-shadow:0 8px 20px rgba(11,27,60,.06),0 32px 64px rgba(11,27,60,.14);border-radius:18px;padding:20px 22px;z-index:3;}
+.gpos{position:absolute;transform:translate(-50%,-50%);z-index:3;}
+.gcard{position:relative;background:#fff;border:1px solid var(--line);box-shadow:0 8px 20px rgba(11,27,60,.06),0 32px 64px rgba(11,27,60,.14);border-radius:18px;padding:20px 22px;}
 .gc-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;}
 .gc-pill{font-size:.66rem;font-weight:600;color:var(--slate-l);background:var(--paper);border:1px solid var(--line);padding:3px 9px;border-radius:100px;}
 .gc-row{display:flex;align-items:center;gap:9px;margin-bottom:10px;}
@@ -134,9 +135,9 @@ a{text-decoration:none;color:inherit;}
 .gc-dot{width:9px;height:9px;border-radius:50%;background:var(--orange);}
 .gc-donut{position:relative;width:88px;height:88px;display:flex;align-items:center;justify-content:center;}
 .gc-donut-val{position:absolute;font-family:'Poppins',sans-serif;font-weight:800;font-size:1.05rem;color:var(--ink);}
-.gc-crec{top:-2%;left:2%;width:250px;animation:bob 6s ease-in-out infinite;}
-.gc-aud{top:40%;right:-7%;animation:bob 5.4s ease-in-out infinite -1.6s;}
-.gc-conv{bottom:2%;left:-4%;width:206px;animation:bob 5.8s ease-in-out infinite -.9s;}
+.gc-crec{width:250px;animation:bob 6s ease-in-out infinite;}
+.gc-aud{width:188px;animation:bob 5.4s ease-in-out infinite -1.6s;}
+.gc-conv{width:206px;animation:bob 5.8s ease-in-out infinite -.9s;}
 /* geometría de fondo */
 .hero-halo{position:absolute;top:48%;left:50%;transform:translate(-50%,-50%);width:clamp(420px,46vh,560px);height:clamp(420px,46vh,560px);border-radius:50%;background:radial-gradient(circle,rgba(143,162,218,.16),rgba(143,162,218,.04) 55%,transparent 72%);z-index:0;}
 .hero-orbit{position:absolute;top:48%;left:50%;transform:translate(-50%,-50%);width:clamp(440px,52vh,620px);height:clamp(440px,52vh,620px);border-radius:50%;border:1.5px dashed rgba(143,162,218,.4);z-index:0;animation:spin 60s linear infinite;}
@@ -379,6 +380,7 @@ a{text-decoration:none;color:inherit;}
       <div class="hero-orbit hero-orbit2"></div>
       <img class="hero-peng2" src="aury-hero.png" alt="Aury, tu copiloto de crecimiento"/>
 
+      <div class="gpos" style="top:11%;left:60%">
       <div class="gcard gc-crec">
         <div class="gc-top"><span class="gc-label">Crecimiento</span><span class="gc-pill">30 días</span></div>
         <div class="gc-row"><span class="gc-num">+38%</span><span class="gc-delta up">▲ 12%</span></div>
@@ -391,7 +393,9 @@ a{text-decoration:none;color:inherit;}
           <circle cx="208" cy="5" r="3.5" fill="#8FA2DA"/>
         </svg>
       </div>
+      </div>
 
+      <div class="gpos" style="top:64%;left:92%">
       <div class="gcard gc-aud">
         <div class="gc-top"><span class="gc-label"><span class="gc-dot"></span>Audiencia</span></div>
         <div class="gc-donut">
@@ -403,7 +407,9 @@ a{text-decoration:none;color:inherit;}
         </div>
         <div class="gc-cap">+1.240 nuevos este mes</div>
       </div>
+      </div>
 
+      <div class="gpos" style="top:82%;left:26%">
       <div class="gcard gc-conv">
         <div class="gc-top"><span class="gc-label">Conversión</span><span class="gc-delta up">▲ 4.2%</span></div>
         <div class="gc-num">+18%</div>
@@ -417,6 +423,7 @@ a{text-decoration:none;color:inherit;}
           <rect x="102" y="13" width="13" height="24" rx="3" fill="#CBD3EC"/>
         </svg>
         <div class="gc-cap">vs. mes anterior</div>
+      </div>
       </div>
     </div>
   </div>
