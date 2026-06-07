@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="robots" content="noindex,nofollow"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>aury. — Crecimiento inteligente para tu negocio</title>
+<meta name="description" content="Aury combina performance marketing con atribución real y formación en automatización. Convierte datos en crecimiento: más clientes con el mismo presupuesto, o aprende a automatizar sin código."/>
+<meta name="keywords" content="performance marketing, atribución real, closed loop, Meta Ads, CAPI, automatización, IA, cursos sin código, Madrid"/>
+<meta name="author" content="Aury — Cristian Lopez Garcia"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="aury. — Tu copiloto de crecimiento"/>
+<meta property="og:description" content="Performance marketing con atribución real + formación en automatización. Más clientes con el mismo presupuesto."/>
+<meta property="og:locale" content="es_ES"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  /* Brand — extraído del deck + mockup */
+  --navy:#0B1B3C;        /* azul profundo cover */
+  --navy2:#0E2148;       /* slides azules */
+  --navy3:#14274F;       /* cards sobre navy */
+  --orange:#FB600E;      /* naranja marca (del logo oficial) */
+  --orange-d:#DB4F08;
+  --orange-l:#FF8A45;
+  --paper:#F6F1E9;       /* crema fondo claro */
+  --paper2:#FBF8F2;
+  --white:#FFFFFF;
+  --green:#34B27B;
+  --green-l:#E7F5EE;
+  --ink:#0B1B3C;         /* texto sobre claro */
+  --slate:#5A6478;       /* texto muted claro */
+  --slate-l:#8A93A6;
+  --on-navy:#AFC0DC;     /* texto muted sobre navy */
+  --on-navy-d:#7E90B2;
+  --line:#E6DFD3;        /* borde sobre crema */
+  --line-navy:rgba(175,192,220,.16);
+  --shadow-sm:0 4px 16px rgba(11,27,60,.06);
+  --shadow:0 18px 48px rgba(11,27,60,.10);
+  --shadow-lg:0 32px 90px rgba(11,27,60,.16);
+  --r:18px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+h1,h2,h3,.disp{font-family:'Poppins',sans-serif;letter-spacing:-.02em;}
+.serif{font-family:'Playfair Display',serif;letter-spacing:-.01em;}
+a{text-decoration:none;color:inherit;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+.acc{color:var(--orange);}
+
+/* ── NAV ── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:background .35s,box-shadow .35s,border-color .35s;border-bottom:1px solid transparent;}
+.nav.scrolled{background:rgba(246,241,233,.88);backdrop-filter:saturate(180%) blur(16px);border-color:var(--line);box-shadow:0 1px 0 rgba(11,27,60,.03);}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:74px;}
+.logo{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.5rem;color:var(--ink);letter-spacing:-.04em;display:inline-flex;align-items:flex-end;line-height:1;}
+.logo .dot{display:inline-block;width:.34em;height:.34em;background:var(--orange);margin-left:.04em;margin-bottom:.06em;border-radius:2px;}
+.logo.light{color:var(--white);}
+.nav-links{display:flex;align-items:center;gap:34px;list-style:none;}
+.nav-links a{font-size:.92rem;font-weight:500;color:var(--slate);transition:color .2s;}
+.nav-links a:hover{color:var(--ink);}
+.btn{font-family:'DM Sans',sans-serif;font-weight:600;font-size:.92rem;padding:11px 22px;border-radius:100px;display:inline-flex;align-items:center;gap:8px;cursor:pointer;border:1.5px solid transparent;transition:transform .15s,background .2s,box-shadow .2s,border-color .2s,color .2s;white-space:nowrap;}
+.btn-primary{background:var(--navy);color:var(--white);}
+.btn-primary:hover{background:#13294f;transform:translateY(-2px);box-shadow:0 10px 26px rgba(11,27,60,.25);color:var(--white);}
+.btn-orange{background:var(--orange);color:var(--white);box-shadow:0 8px 22px rgba(242,106,27,.28);}
+.btn-orange:hover{background:var(--orange-d);transform:translateY(-2px);box-shadow:0 12px 30px rgba(242,106,27,.4);color:var(--white);}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line);}
+.btn-ghost:hover{border-color:var(--slate-l);background:rgba(11,27,60,.03);}
+.btn-ghost.on-navy{color:var(--white);border-color:var(--line-navy);}
+.btn-ghost.on-navy:hover{border-color:var(--on-navy);background:rgba(255,255,255,.06);}
+.btn-lg{padding:15px 30px;font-size:1rem;}
+.hbg{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;}
+.hbg span{width:24px;height:2px;background:var(--ink);border-radius:2px;}
+.mmenu{display:none;position:fixed;inset:0;background:var(--navy);z-index:1100;flex-direction:column;align-items:center;justify-content:center;gap:30px;}
+.mmenu.open{display:flex;}
+.mmenu a{font-family:'Poppins',sans-serif;font-weight:700;font-size:1.7rem;color:var(--white);}
+.mmenu a:hover{color:var(--orange-l);}
+.mm-x{position:absolute;top:22px;right:26px;background:none;border:none;color:var(--on-navy);font-size:1.6rem;cursor:pointer;}
+
+/* ── HERO ── */
+.hero{padding:150px 0 90px;background:radial-gradient(120% 90% at 88% 0%,rgba(242,106,27,.06) 0%,transparent 55%),var(--paper);}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;}
+.kick{display:inline-flex;align-items:center;gap:9px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:24px;}
+.kick::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--orange);}
+.hero h1{font-weight:800;font-size:clamp(2.5rem,5vw,4.1rem);line-height:1.04;color:var(--ink);margin-bottom:22px;}
+.hero p.lead{font-size:1.12rem;color:var(--slate);line-height:1.6;max-width:440px;margin-bottom:34px;}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
+.hero-trust{display:flex;gap:26px;margin-top:40px;padding-top:28px;border-top:1px solid var(--line);flex-wrap:wrap;}
+.ht-n{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.7rem;color:var(--ink);line-height:1;}
+.ht-n .acc{color:var(--orange);}
+.ht-l{font-size:.78rem;color:var(--slate-l);margin-top:5px;line-height:1.35;}
+
+/* hero visual */
+.hero-visual{position:relative;display:flex;justify-content:center;align-items:center;min-height:440px;}
+.hero-peng{width:clamp(240px,30vw,360px);filter:drop-shadow(0 26px 40px rgba(11,27,60,.14));position:relative;z-index:2;}
+.card-float{position:absolute;background:var(--white);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:14px 16px;z-index:3;}
+.cf-1{top:6%;right:-2%;animation:bob 5s ease-in-out infinite;}
+.cf-2{top:34%;right:-8%;width:188px;animation:bob 6s ease-in-out infinite -1.5s;}
+.cf-3{bottom:6%;left:-3%;animation:bob 5.5s ease-in-out infinite -.8s;background:var(--navy);border-color:var(--navy3);}
+.cf-label{font-size:.7rem;color:var(--slate-l);font-weight:600;margin-bottom:4px;display:flex;align-items:center;gap:6px;}
+.cf-3 .cf-label{color:var(--on-navy);}
+.cf-val{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.35rem;color:var(--ink);line-height:1;}
+.cf-3 .cf-val{color:var(--white);}
+.cf-val .acc{color:var(--orange);}
+.cf-dot{width:9px;height:9px;border-radius:50%;background:var(--orange);}
+.spark{margin-top:10px;}
+@keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(-11px);}}
+
+/* ── SPLIT 50/50 ── */
+.split{padding:30px 0 96px;background:var(--paper);}
+.split-head{text-align:center;max-width:640px;margin:0 auto 46px;}
+.eyebrow{font-weight:600;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);margin-bottom:14px;}
+.h2{font-weight:800;font-size:clamp(1.9rem,3.4vw,2.7rem);line-height:1.1;color:var(--ink);}
+.sub{color:var(--slate);font-size:1.02rem;line-height:1.6;margin-top:14px;}
+.split-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+.path{border-radius:24px;padding:38px 36px;position:relative;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s;}
+.path:hover{transform:translateY(-4px);}
+.path-tech{background:var(--navy);color:var(--white);box-shadow:var(--shadow);}
+.path-tech:hover{box-shadow:var(--shadow-lg);}
+.path-cursos{background:var(--white);border:1px solid var(--line);box-shadow:var(--shadow-sm);}
+.path-cursos:hover{box-shadow:var(--shadow);}
+.path-tag{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;padding:6px 13px;border-radius:100px;width:fit-content;margin-bottom:22px;}
+.path-tech .path-tag{background:rgba(242,106,27,.18);color:var(--orange-l);}
+.path-cursos .path-tag{background:var(--green-l);color:var(--green);}
+.path h3{font-weight:800;font-size:1.7rem;line-height:1.12;margin-bottom:12px;}
+.path-cursos h3{color:var(--ink);}
+.path p{font-size:.98rem;line-height:1.6;margin-bottom:24px;}
+.path-tech p{color:var(--on-navy);}
+.path-cursos p{color:var(--slate);}
+.path ul{list-style:none;display:flex;flex-direction:column;gap:11px;margin-bottom:30px;flex:1;}
+.path li{display:flex;gap:11px;align-items:flex-start;font-size:.92rem;line-height:1.45;}
+.path-tech li{color:#D6E0F0;}
+.path-cursos li{color:var(--slate);}
+.tick{flex-shrink:0;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;margin-top:1px;}
+.path-tech .tick{background:var(--orange);color:var(--white);}
+.path-cursos .tick{background:var(--green-l);color:var(--green);}
+.path-foot{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-top:22px;border-top:1px solid;flex-wrap:wrap;}
+.path-tech .path-foot{border-color:var(--line-navy);}
+.path-cursos .path-foot{border-color:var(--line);}
+.path-price{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.05rem;}
+.path-tech .path-price{color:var(--white);}
+.path-cursos .path-price{color:var(--green);}
+.path-price small{font-family:'DM Sans';font-weight:500;font-size:.74rem;color:var(--slate-l);}
+.path-tech .path-price small{color:var(--on-navy-d);}
+
+/* ── AURY TECH (navy) ── */
+.tech{background:var(--navy);color:var(--white);padding:104px 0;position:relative;overflow:hidden;}
+.tech::before{content:"";position:absolute;top:-160px;right:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(242,106,27,.12),transparent 65%);pointer-events:none;}
+.tech .eyebrow{color:var(--orange-l);}
+.tech-intro{max-width:760px;margin-bottom:64px;}
+.tech-intro h2{font-weight:800;font-size:clamp(2rem,4.2vw,3.3rem);line-height:1.06;color:var(--white);}
+.tech-intro .serif-q{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:1.18rem;color:var(--on-navy);margin-top:18px;}
+.tech-cols{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+.tech-copy h3{font-weight:700;font-size:1.5rem;color:var(--white);margin-bottom:14px;}
+.tech-copy p{color:var(--on-navy);font-size:1rem;line-height:1.65;margin-bottom:26px;}
+.loop-list{display:flex;flex-direction:column;gap:14px;margin-bottom:32px;}
+.loop-row{display:flex;align-items:center;gap:14px;}
+.loop-ico{width:42px;height:42px;border-radius:12px;background:var(--navy3);border:1px solid var(--line-navy);display:flex;align-items:center;justify-content:center;font-family:'Poppins';font-weight:700;font-size:.72rem;color:var(--orange-l);flex-shrink:0;}
+.loop-row b{color:var(--white);font-weight:600;font-size:.98rem;}
+.loop-row span{display:block;color:var(--on-navy-d);font-size:.84rem;margin-top:2px;}
+
+/* closed loop diagram */
+.loop-viz{position:relative;width:100%;max-width:380px;aspect-ratio:1;margin:0 auto;}
+.loop-center{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;flex-direction:column;}
+.loop-center b{font-family:'Poppins';font-weight:800;font-size:1.05rem;color:var(--white);}
+.loop-center span{font-size:.78rem;color:var(--orange-l);font-weight:600;margin-top:4px;}
+.loop-node{position:absolute;width:84px;height:84px;border-radius:50%;background:var(--white);display:flex;align-items:center;justify-content:center;font-family:'Poppins';font-weight:700;font-size:.74rem;color:var(--navy);box-shadow:0 8px 24px rgba(0,0,0,.3);transform:translate(-50%,-50%);}
+.ln-top{top:0;left:50%;}
+.ln-right{top:50%;left:100%;}
+.ln-bottom{top:100%;left:50%;}
+.ln-left{top:50%;left:0;}
+.loop-ring{position:absolute;inset:8%;border-radius:50%;border:2px solid rgba(242,106,27,.55);}
+.loop-ring::after{content:"";position:absolute;inset:-2px;border-radius:50%;border:2px solid transparent;border-top-color:var(--orange);border-right-color:var(--orange);animation:spin 4s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+/* compound chart */
+.tech-chart{margin-top:80px;background:var(--navy2);border:1px solid var(--line-navy);border-radius:24px;padding:38px 40px;}
+.tech-chart-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:8px;}
+.tech-chart h3{font-weight:800;font-size:1.55rem;color:var(--white);}
+.tech-chart h3 .acc{color:var(--orange);}
+.tech-chart .cap{color:var(--on-navy);font-size:.9rem;max-width:380px;}
+.chart-legend{display:flex;gap:20px;margin-top:18px;flex-wrap:wrap;}
+.lg{display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--on-navy);}
+.lg .swatch{width:22px;height:3px;border-radius:2px;}
+
+/* ── CURSOS ── */
+.cursos{padding:100px 0;background:var(--paper);}
+.cursos-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:44px;}
+.crs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.crs{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s,border-color .25s;position:relative;}
+.crs:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#DCD2C2;}
+.crs-top{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+.crs-num{width:38px;height:38px;border-radius:11px;background:var(--paper);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:'Poppins';font-weight:700;font-size:.8rem;color:var(--orange);flex-shrink:0;}
+.crs-cat{font-size:.66rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--slate-l);}
+.crs-badge{margin-left:auto;font-size:.6rem;font-weight:700;letter-spacing:.06em;padding:3px 10px;border-radius:100px;background:var(--navy);color:var(--white);}
+.crs h4{font-family:'Poppins';font-weight:700;font-size:1.02rem;line-height:1.3;color:var(--ink);margin-bottom:10px;}
+.crs p{font-size:.86rem;color:var(--slate);line-height:1.55;flex:1;margin-bottom:18px;}
+.crs-foot{display:flex;align-items:center;justify-content:space-between;padding-top:15px;border-top:1px solid var(--line);}
+.crs-price{font-family:'Poppins';font-weight:700;font-size:.9rem;color:var(--green);}
+.crs-price.pago{font-size:1.05rem;}
+.crs-price small{font-family:'DM Sans';font-weight:500;font-size:.68rem;color:var(--slate-l);}
+.crs-go{font-weight:600;font-size:.82rem;color:var(--orange);transition:gap .2s;display:inline-flex;gap:5px;}
+.crs:hover .crs-go{gap:9px;}
+.cursos-cta{text-align:center;margin-top:42px;}
+
+/* ── RESULTADOS ── */
+.res{padding:100px 0;background:var(--paper2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.res-head{text-align:center;max-width:600px;margin:0 auto 50px;}
+.res-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+.res-card{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:34px;box-shadow:var(--shadow-sm);}
+.res-pill{display:inline-block;font-weight:600;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);background:rgba(242,106,27,.1);padding:6px 14px;border-radius:100px;margin-bottom:14px;}
+.res-meta{font-size:.86rem;color:var(--slate-l);margin-bottom:22px;}
+.res-row{display:flex;align-items:center;gap:16px;padding:16px 0;border-top:1px solid var(--line);}
+.res-row:first-of-type{border-top:none;}
+.res-arrow{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
+.res-arrow.down{background:rgba(242,106,27,.12);color:var(--orange);}
+.res-arrow.up{background:var(--green-l);color:var(--green);}
+.res-row .rl b{display:block;font-family:'Poppins';font-weight:700;font-size:.98rem;color:var(--ink);}
+.res-row .rl span{font-size:.8rem;color:var(--slate-l);}
+.res-num{margin-left:auto;font-family:'Poppins';font-weight:800;font-size:1.5rem;}
+.res-num.down{color:var(--orange);}
+.res-num.up{color:var(--green);}
+.res-foot{text-align:center;font-size:.82rem;color:var(--slate-l);margin-top:34px;font-style:italic;}
+
+/* ── CTA final ── */
+.final{background:var(--navy);color:var(--white);padding:120px 0;text-align:center;position:relative;overflow:hidden;}
+.final .star{position:absolute;width:6px;height:6px;border-radius:50%;background:var(--orange);opacity:.7;}
+.final .logo-big{font-family:'Poppins';font-weight:800;font-size:clamp(2.6rem,6vw,4rem);color:var(--white);letter-spacing:-.04em;display:inline-flex;align-items:flex-end;line-height:1;margin-bottom:18px;}
+.final .logo-big .dot{width:.3em;height:.3em;background:var(--orange);margin-left:.05em;margin-bottom:.08em;}
+.final h2{font-weight:800;font-size:clamp(1.7rem,3.4vw,2.5rem);color:var(--white);margin-bottom:12px;}
+.final h2 .acc{color:var(--orange);}
+.final p{color:var(--on-navy);font-size:1.05rem;max-width:440px;margin:0 auto 34px;}
+.final-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+/* ── FOOTER ── */
+.footer{background:var(--navy);color:var(--on-navy);padding:60px 0 36px;border-top:1px solid var(--line-navy);}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid var(--line-navy);}
+.footer-brand p{font-size:.86rem;line-height:1.65;max-width:280px;margin-top:14px;color:var(--on-navy-d);}
+.footer h5{font-family:'Poppins';font-weight:600;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--white);margin-bottom:16px;}
+.footer a{display:block;font-size:.86rem;color:var(--on-navy);margin-bottom:11px;transition:color .2s;}
+.footer a:hover{color:var(--orange-l);}
+.footer-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding-top:28px;font-size:.78rem;color:var(--on-navy-d);}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.vis{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.08s;}.d2{transition-delay:.16s;}.d3{transition-delay:.24s;}
+
+@media (prefers-reduced-motion: reduce){*{animation:none !important;transition-duration:.01ms !important;}}
+
+@media(max-width:920px){
+  .wrap{padding:0 22px;}
+  .nav-links{display:none;}.hbg{display:flex;}
+  .hero{padding:120px 0 60px;}
+  .hero-grid,.tech-cols,.split-grid,.res-grid,.footer-top{grid-template-columns:1fr;}
+  .hero-visual{order:-1;min-height:340px;}
+  .crs-grid{grid-template-columns:1fr;}
+  .tech,.cursos,.res,.final,.split{padding-top:72px;padding-bottom:72px;}
+  .footer-top{gap:30px;}
+  .card-float{transform:scale(.92);}
+  .cf-1{right:0;}.cf-2{right:-2%;}.cf-3{left:0;}
+}
+@media(max-width:560px){
+  .hero h1{font-size:2.4rem;}
+  .path{padding:30px 26px;}
+  .hero-trust{gap:18px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a href="#" class="logo"><img src="aury_logo.svg" alt="aury" style="height:28px;display:block"/></a>
+    <ul class="nav-links">
+      <li><a href="#tech">Aury Tech</a></li>
+      <li><a href="#cursos">Cursos</a></li>
+      <li><a href="#resultados">Resultados</a></li>
+      <li><a href="#precios">Precios</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <a href="mailto:hola@aury.tech" class="btn btn-primary" style="">Solicitar demo</a>
+      <button class="hbg" onclick="openMM()" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mmenu" id="mm">
+  <button class="mm-x" onclick="closeMM()" aria-label="Cerrar">&#x2715;</button>
+  <a href="#tech" onclick="closeMM()">Aury Tech</a>
+  <a href="#cursos" onclick="closeMM()">Cursos</a>
+  <a href="#resultados" onclick="closeMM()">Resultados</a>
+  <a href="#precios" onclick="closeMM()">Precios</a>
+  <a href="mailto:hola@aury.tech" onclick="closeMM()" style="color:var(--orange-l);">Solicitar demo</a>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text reveal">
+      <div class="kick">Crecimiento inteligente</div>
+      <h1>Convierte datos en<br/>crecimiento <span class="acc">inteligente.</span></h1>
+      <p class="lead">Aury combina performance marketing con atribución real y formación en automatización. Tus ideas al frente. Los datos, de tu lado.</p>
+      <div class="hero-ctas">
+        <a href="mailto:hola@aury.tech" class="btn btn-orange btn-lg">Solicitar demo</a>
+        <a href="#cursos" class="btn btn-ghost btn-lg">Ver cursos gratis →</a>
+      </div>
+      <div class="hero-trust">
+        <div><div class="ht-n">+208<span class="acc">%</span></div><div class="ht-l">impresiones en<br/>cliente real</div></div>
+        <div><div class="ht-n">−55<span class="acc">%</span></div><div class="ht-l">costo por clic<br/>en 6 meses</div></div>
+        <div><div class="ht-n">0€</div><div class="ht-l">para empezar<br/>con los cursos</div></div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal d1">
+      <img class="hero-peng" src="penguin-cutout.png" alt="Aury, tu copiloto de crecimiento"/>
+      <div class="card-float cf-1">
+        <div class="cf-label"><span class="cf-dot"></span>Audiencia</div>
+        <div class="cf-val">+32<span class="acc">%</span></div>
+      </div>
+      <div class="card-float cf-2">
+        <div class="cf-label">Crecimiento</div>
+        <div class="cf-val">+38<span class="acc">%</span></div>
+        <svg class="spark" width="156" height="40" viewBox="0 0 156 40" fill="none">
+          <polyline points="2,34 26,30 50,32 78,22 104,24 130,12 154,6" stroke="#F26A1B" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="154" cy="6" r="3.5" fill="#F26A1B"/>
+        </svg>
+      </div>
+      <div class="card-float cf-3">
+        <div class="cf-label">Conversión</div>
+        <div class="cf-val">+18<span class="acc">%</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- SPLIT 50/50 -->
+<section class="split">
+  <div class="wrap">
+    <div class="split-head reveal">
+      <div class="eyebrow">Dos formas de crecer con Aury</div>
+      <h2 class="h2">Que lo hagamos por ti, o que <span class="acc">lo aprendas tú.</span></h2>
+      <p class="sub">El mismo motor de datos detrás de dos caminos. Elige el que va contigo hoy.</p>
+    </div>
+    <div class="split-grid">
+      <!-- AURY TECH -->
+      <div class="path path-tech reveal">
+        <span class="path-tag">Para tu negocio · Aury Tech</span>
+        <h3>Más clientes con<br/>el mismo presupuesto.</h3>
+        <p>Performance marketing con atribución real. Conectamos Pixel, CAPI, CRM y WhatsApp para que Meta optimice por tus ventas, no por clics.</p>
+        <ul>
+          <li><span class="tick">✓</span>Setup técnico completo de atribución closed-loop</li>
+          <li><span class="tick">✓</span>Campañas que aprenden quién paga de verdad</li>
+          <li><span class="tick">✓</span>La cuenta a tu nombre, no a la nuestra</li>
+        </ul>
+        <div class="path-foot">
+          <div class="path-price">Desde €600 <small>/ mes</small></div>
+          <a href="mailto:hola@aury.tech" class="btn btn-orange">Solicitar demo</a>
+        </div>
+      </div>
+      <!-- CURSOS -->
+      <div class="path path-cursos reveal d1">
+        <span class="path-tag">Para ti · Cursos</span>
+        <h3>Aprende a automatizar<br/>sin saber código.</h3>
+        <p>Cursos prácticos de IA y automatización. Tu primer flujo activo en 30 minutos, sin equipo técnico ni presupuesto.</p>
+        <ul>
+          <li><span class="tick">✓</span>6 cursos gratuitos, sin tarjeta</li>
+          <li><span class="tick">✓</span>Make, Google Sheets, IA y prompting real</li>
+          <li><span class="tick">✓</span>Lecciones interactivas + certificado</li>
+        </ul>
+        <div class="path-foot">
+          <div class="path-price">Gratis <small>· empieza hoy</small></div>
+          <a href="https://auryontech.com/catalogo-de-cursos/" class="btn btn-primary">Ver cursos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AURY TECH -->
+<section class="tech" id="tech">
+  <div class="wrap">
+    <div class="tech-intro reveal">
+      <div class="eyebrow">Aury Tech · Atribución real</div>
+      <h2>El mismo presupuesto<br/>trae <span class="acc">más clientes.</span></h2>
+      <p class="serif-q">Cuando Meta optimiza por tus ventas reales, no por clics.</p>
+    </div>
+
+    <div class="tech-cols">
+      <div class="tech-copy reveal">
+        <h3>Cerramos el círculo.</h3>
+        <p>Cada conversación, cada lead y cada venta vuelve al algoritmo. Meta aprende quién compra de verdad y entrega tu anuncio a más gente como esa.</p>
+        <div class="loop-list">
+          <div class="loop-row"><div class="loop-ico">01</div><div><b>Pixel + CAPI</b><span>cada evento, del navegador y del servidor</span></div></div>
+          <div class="loop-row"><div class="loop-ico">02</div><div><b>CRM</b><span>ve quién reserva y quién paga</span></div></div>
+          <div class="loop-row"><div class="loop-ico">03</div><div><b>WhatsApp</b><span>el primer contacto, conectado al sistema</span></div></div>
+          <div class="loop-row"><div class="loop-ico">04</div><div><b>Plataformas</b><span>eventos de venta de vuelta a Meta y Google</span></div></div>
+        </div>
+        <a href="mailto:hola@aury.tech" class="btn btn-orange btn-lg">Evaluar mi cuenta (30 min)</a>
+      </div>
+
+      <div class="reveal d1">
+        <div class="loop-viz">
+          <div class="loop-ring"></div>
+          <div class="loop-center"><b>Ciclo cerrado</b><span>mismo gasto, más resultado</span></div>
+          <div class="loop-node ln-top">PIXEL</div>
+          <div class="loop-node ln-right">CAPI</div>
+          <div class="loop-node ln-bottom">CRM</div>
+          <div class="loop-node ln-left">WHATSAPP</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- compound chart -->
+    <div class="tech-chart reveal">
+      <div class="tech-chart-head">
+        <div>
+          <h3>Mismo dinero. <span class="acc">Resultado exponencial.</span></h3>
+          <p class="cap" style="margin-top:8px;">Más datos, mejor predicción. Mejor predicción, mejor delivery. Más ventas, más datos. Un loop que se acelera solo.</p>
+        </div>
+      </div>
+      <svg viewBox="0 0 800 280" width="100%" style="margin-top:20px;overflow:visible;">
+        <!-- baseline sin sistema -->
+        <line x1="40" y1="220" x2="780" y2="220" stroke="#7E90B2" stroke-width="2.5" stroke-dasharray="7,7"/>
+        <text x="780" y="240" fill="#7E90B2" font-size="12" text-anchor="end" font-family="DM Sans">SIN SISTEMA — 20 clientes siempre</text>
+        <!-- con sistema -->
+        <polyline points="40,210 230,160 420,110 610,70 770,40" fill="none" stroke="#F26A1B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="40" cy="210" r="5" fill="#F26A1B"/>
+        <circle cx="230" cy="160" r="5" fill="#F26A1B"/>
+        <circle cx="420" cy="110" r="5" fill="#F26A1B"/>
+        <circle cx="770" cy="40" r="6" fill="#F26A1B" stroke="#0E2148" stroke-width="3"/>
+        <text x="40" y="200" fill="#fff" font-size="12.5" font-weight="700" font-family="Poppins">Mes 1: 20</text>
+        <text x="230" y="150" fill="#fff" font-size="12.5" font-weight="700" font-family="Poppins">Mes 3: 28</text>
+        <text x="420" y="100" fill="#fff" font-size="12.5" font-weight="700" font-family="Poppins">Mes 6: 42</text>
+        <text x="770" y="28" fill="#fff" font-size="13" font-weight="700" text-anchor="end" font-family="Poppins">Mes 12: 52 clientes</text>
+      </svg>
+      <div class="chart-legend">
+        <div class="lg"><span class="swatch" style="background:#F26A1B;"></span>Con sistema Aury</div>
+        <div class="lg"><span class="swatch" style="background:#7E90B2;border-radius:0;"></span>Sin sistema</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURSOS -->
+<section class="cursos" id="cursos">
+  <div class="wrap">
+    <div class="cursos-head reveal">
+      <div>
+        <div class="eyebrow">Formación · Sin código</div>
+        <h2 class="h2">Aprende a automatizar<br/><span class="acc">a tu propio ritmo.</span></h2>
+      </div>
+      <p class="sub" style="max-width:380px;">6 cursos gratuitos y 1 de pago para implementar IA y automatización sin saber de código. Empieza hoy.</p>
+    </div>
+
+    <div class="crs-grid">
+      <div class="crs reveal">
+        <div class="crs-top"><div class="crs-num">01</div><span class="crs-cat">IA y contenido</span></div>
+        <h4>Prompts que trabajan: la guía que nadie te dio</h4>
+        <p>Las 6 técnicas reales de prompting para conseguir resultados profesionales desde el primer intento.</p>
+        <div class="crs-foot"><span class="crs-price">Gratis</span><a href="https://auryontech.com/curso-prompts-que-trabajan/" class="crs-go">Ver curso →</a></div>
+      </div>
+
+      <div class="crs reveal d1">
+        <div class="crs-top"><div class="crs-num">02</div><span class="crs-cat">IA y contenido</span></div>
+        <h4>Publica con IA. Sin que se note.</h4>
+        <p>El sistema para crear contenido que suena a ti, no a robot. Elimina los 5 síntomas del texto de IA.</p>
+        <div class="crs-foot"><span class="crs-price">Gratis</span><a href="https://auryontech.com/curso-publica-con-ia-sin-que-se-note/" class="crs-go">Ver curso →</a></div>
+      </div>
+
+      <div class="crs reveal d2">
+        <div class="crs-top"><div class="crs-num">03</div><span class="crs-cat">IA y contenido</span></div>
+        <h4>Vende con IA. Sin perder tu estilo.</h4>
+        <p>Cierra más con los leads que ya tienes. Prompts para primer contacto, seguimiento y propuesta.</p>
+        <div class="crs-foot"><span class="crs-price">Gratis</span><a href="https://auryontech.com/material-vende-con-ia-sin-perder-tu-estilo/" class="crs-go">Ver curso →</a></div>
+      </div>
+
+      <div class="crs reveal">
+        <div class="crs-top"><div class="crs-num">04</div><span class="crs-cat">Automatización</span></div>
+        <h4>Automatiza tus documentos. Sin tocar nada.</h4>
+        <p>Genera presupuestos, propuestas y contratos desde Excel en segundos con Power Automate Desktop.</p>
+        <div class="crs-foot"><span class="crs-price">Gratis</span><a href="https://auryontech.com/curso-automatiza-tus-documentos-sin-tocar-nada/" class="crs-go">Ver curso →</a></div>
+      </div>
+
+      <div class="crs reveal d1">
+        <div class="crs-top"><div class="crs-num">05</div><span class="crs-cat">Automatización</span></div>
+        <h4>Tu primera automatización en 30 minutos</h4>
+        <p>Crea tu primer flujo automático con Make y Google Sheets. Sin código ni experiencia previa.</p>
+        <div class="crs-foot"><span class="crs-price">Gratis</span><a href="https://auryontech.com/curso-tu-primera-automatizacion-en-30-minutos/" class="crs-go">Ver curso →</a></div>
+      </div>
+
+      <div class="crs reveal d2">
+        <div class="crs-top"><div class="crs-num">06</div><span class="crs-cat">Negocio</span></div>
+        <h4>Tu Mini CRM gratis en Google Sheets</h4>
+        <p>Organiza clientes y leads con un sistema que funciona como un CRM real, sin pagar suscripciones.</p>
+        <div class="crs-foot"><span class="crs-price">Gratis</span><a href="https://auryontech.com/curso-tu-mini-crm-gratis-en-google-sheets/" class="crs-go">Ver curso →</a></div>
+      </div>
+
+      <!-- PAGO -->
+      <div class="crs reveal" id="precios" style="grid-column:1/-1;display:grid;grid-template-columns:1fr auto;align-items:center;gap:24px;background:linear-gradient(100deg,#fff 60%,rgba(52,178,123,.06));">
+        <div>
+          <div class="crs-top" style="margin-bottom:12px;"><div class="crs-num" style="color:var(--green);background:var(--green-l);border-color:transparent;">07</div><span class="crs-cat">Negocio</span><span class="crs-badge" style="background:var(--green);">Más completo</span></div>
+          <h4 style="font-size:1.2rem;">Tu Tienda en Automático</h4>
+          <p style="margin-bottom:0;max-width:560px;">El sistema completo para automatizar tu tienda online: pedidos, respuestas a clientes, inventario y reportes funcionando solos.</p>
+        </div>
+        <div style="text-align:right;display:flex;flex-direction:column;gap:12px;align-items:flex-end;">
+          <div class="crs-price pago">47€ <small>pago único</small></div>
+          <a href="https://auryontech.com/catalogo-de-cursos/" class="btn" style="background:var(--green);color:#fff;">Ver curso</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cursos-cta reveal">
+      <a href="https://auryontech.com/catalogo-de-cursos/" class="btn btn-primary btn-lg">Ver el catálogo completo →</a>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTADOS -->
+<section class="res" id="resultados">
+  <div class="wrap">
+    <div class="res-head reveal">
+      <div class="eyebrow">Resultados reales</div>
+      <h2 class="h2">Dos clientes, <span class="acc">dos plataformas.</span></h2>
+      <p class="sub">Comparación de los últimos 30 días vs. los 30 previos. Datos directos de las cuentas.</p>
+    </div>
+    <div class="res-grid">
+      <div class="res-card reveal">
+        <span class="res-pill">Cliente A · Google</span>
+        <div class="res-meta">Sector industrial · arranque vs hoy</div>
+        <div class="res-row"><div class="res-arrow down">↓</div><div class="rl"><b>Costo por clic</b><span>de $20.65 a $12.74</span></div><div class="res-num down">−38%</div></div>
+        <div class="res-row"><div class="res-arrow up">↑</div><div class="rl"><b>Impresiones</b><span>más del triple de visibilidad</span></div><div class="res-num up">+208%</div></div>
+        <div class="res-row"><div class="res-arrow up">↑</div><div class="rl"><b>Clics</b><span>más del doble de tráfico</span></div><div class="res-num up">+120%</div></div>
+      </div>
+      <div class="res-card reveal d1">
+        <span class="res-pill">Cliente B · Meta</span>
+        <div class="res-meta">Sector belleza · 6 meses</div>
+        <div class="res-row"><div class="res-arrow down">↓</div><div class="rl"><b>Costo por clic</b><span>de $3.58 a $1.61</span></div><div class="res-num down">−55%</div></div>
+        <div class="res-row"><div class="res-arrow up">↑</div><div class="rl"><b>Alcance</b><span>más del doble de personas</span></div><div class="res-num up">+127%</div></div>
+        <div class="res-row"><div class="res-arrow up">↑</div><div class="rl"><b>Frecuencia</b><span>distribución sana</span></div><div class="res-num up" style="font-size:1.15rem;">estable</div></div>
+      </div>
+    </div>
+    <p class="res-foot reveal">El mercado va 90% pixel-only. El primero que cierra el círculo, gana.</p>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="final">
+  <span class="star" style="top:22%;left:12%;"></span>
+  <span class="star" style="top:30%;right:14%;"></span>
+  <span class="star" style="bottom:24%;left:18%;width:5px;height:5px;"></span>
+  <span class="star" style="bottom:30%;right:10%;"></span>
+  <div class="wrap reveal">
+    <div class="logo-big"><img src="aury_logo_white.svg" alt="aury" style="height:64px;display:block;margin:0 auto"/></div>
+    <h2>Tu <span class="acc">copiloto</span> de crecimiento.</h2>
+    <p>Tú pones la visión. Nosotros, la máquina que la hace crecer.</p>
+    <div class="final-ctas">
+      <a href="mailto:hola@aury.tech" class="btn btn-orange btn-lg">Solicitar demo</a>
+      <a href="https://auryontech.com/catalogo-de-cursos/" class="btn btn-ghost on-navy btn-lg">Empezar gratis con los cursos</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo light"><img src="aury_logo_white.svg" alt="aury" style="height:30px;display:block"/></a>
+        <p>Performance marketing con atribución real y formación en automatización. Convierte datos en crecimiento. Madrid · Barcelona · LATAM.</p>
+      </div>
+      <div>
+        <h5>Aury Tech</h5>
+        <a href="#tech">Cómo funciona</a>
+        <a href="#resultados">Resultados</a>
+        <a href="#precios">Precios</a>
+        <a href="mailto:hola@aury.tech">Solicitar demo</a>
+      </div>
+      <div>
+        <h5>Cursos</h5>
+        <a href="https://auryontech.com/curso-prompts-que-trabajan/">Prompts que trabajan</a>
+        <a href="https://auryontech.com/curso-tu-primera-automatizacion-en-30-minutos/">Tu primera automatización</a>
+        <a href="https://auryontech.com/curso-tu-mini-crm-gratis-en-google-sheets/">Mini CRM en Sheets</a>
+        <a href="https://auryontech.com/catalogo-de-cursos/">Ver todos</a>
+      </div>
+      <div>
+        <h5>Contacto</h5>
+        <a href="mailto:hola@aury.tech">hola@aury.tech</a>
+        <a href="https://auryontech.com/calculadora-descrube-para-automatizar/">¿Cuánto pierdes?</a>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <span>© 2026 aury. · Crecimiento inteligente</span>
+      <span>Hecho con datos (y automatización) en Madrid</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>30));
+function openMM(){document.getElementById('mm').classList.add('open');document.body.style.overflow='hidden';}
+function closeMM(){document.getElementById('mm').classList.remove('open');document.body.style.overflow='';}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
