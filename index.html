@@ -118,6 +118,29 @@ a{text-decoration:none;color:inherit;}
 .vc-crec{top:0;left:-7%;animation:bob 5s ease-in-out infinite;}
 .vc-aud{top:22%;right:-7%;animation:bob 6s ease-in-out infinite -1.5s;}
 .vc-conv{bottom:6%;left:-1%;animation:bob 5.5s ease-in-out infinite -.8s;}
+/* hero v3 — panel dashboard estilo SaaS real */
+.hero-visual{min-height:540px;}
+.dash{position:relative;width:min(100%,470px);background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 30px 72px rgba(11,27,60,.16);padding:22px;z-index:2;animation:bob 7s ease-in-out infinite;}
+.dash-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;}
+.dash-title{font-family:'Poppins',sans-serif;font-weight:700;font-size:1rem;color:var(--ink);}
+.dash-pill{font-size:.7rem;color:var(--slate-l);background:var(--paper);border:1px solid var(--line);padding:4px 11px;border-radius:100px;font-weight:600;}
+.dash-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px;}
+.kpi{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:11px 12px;}
+.kpi-l{display:block;font-size:.66rem;color:var(--slate-l);font-weight:600;margin-bottom:6px;}
+.kpi-v{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.18rem;color:var(--ink);}
+.kpi-v i{font-style:normal;color:var(--orange);}
+.kpi-on{background:var(--navy);border-color:var(--navy);}
+.kpi-on .kpi-l{color:var(--on-navy);}
+.kpi-on .kpi-v{color:#fff;}
+.dash-chart{border:1px solid var(--line);border-radius:12px;padding:8px;margin-bottom:16px;}
+.dash-foot-h{font-size:.68rem;color:var(--slate-l);font-weight:600;margin-bottom:10px;}
+.pay{display:flex;align-items:center;gap:10px;margin-bottom:9px;max-width:74%;}
+.pay:last-child{margin-bottom:0;}
+.pdot{width:9px;height:9px;border-radius:50%;background:var(--green);flex-shrink:0;}
+.ptrack{flex:1;height:8px;border-radius:6px;background:#EEF1F6;overflow:hidden;}
+.pfill{height:100%;border-radius:6px;background:var(--green);}
+.pamt{font-family:'DM Mono',monospace;font-size:.72rem;color:var(--ink);font-weight:600;min-width:54px;text-align:right;}
+.dash-peng{position:absolute;bottom:-28px;right:-20px;width:132px;z-index:4;filter:drop-shadow(0 18px 28px rgba(11,27,60,.2));animation:bob 5s ease-in-out infinite -1s;}
 
 /* ── SPLIT 50/50 ── */
 .split{padding:30px 0 96px;background:var(--paper);}
@@ -322,40 +345,36 @@ a{text-decoration:none;color:inherit;}
     </div>
 
     <div class="hero-visual reveal d1">
-      <div class="hero-panel"></div>
-      <img class="hero-peng" src="aury-hero.png" alt="Aury, tu copiloto de crecimiento"/>
-
-      <div class="vcard vc-crec">
-        <div class="vc-label">Crecimiento</div>
-        <div class="vc-big">+38<span class="acc">%</span></div>
-        <svg width="190" height="56" viewBox="0 0 190 56" fill="none">
-          <polyline points="4,46 36,40 68,42 100,28 132,30 164,14 186,6" stroke="#8AA6D6" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="186" cy="6" r="4.5" fill="#FB600E"/>
-        </svg>
-      </div>
-
-      <div class="vcard vc-aud">
-        <div class="vc-label"><span class="vc-dot"></span>Audiencia</div>
-        <div class="vc-donut">
-          <svg width="76" height="76" viewBox="0 0 76 76">
-            <circle cx="38" cy="38" r="30" fill="none" stroke="#E3E7EE" stroke-width="9"/>
-            <circle cx="38" cy="38" r="30" fill="none" stroke="#8AA6D6" stroke-width="9" stroke-linecap="round" stroke-dasharray="188.5" stroke-dashoffset="128" transform="rotate(-90 38 38)"/>
-          </svg>
-          <span class="vc-donut-val">+32%</span>
+      <div class="dash">
+        <div class="dash-top">
+          <div class="dash-title">Panel de crecimiento</div>
+          <div class="dash-pill">últimos 30 días</div>
         </div>
+        <div class="dash-kpis">
+          <div class="kpi"><span class="kpi-l">Crecimiento</span><span class="kpi-v">+38<i>%</i></span></div>
+          <div class="kpi"><span class="kpi-l">Audiencia</span><span class="kpi-v">+32<i>%</i></span></div>
+          <div class="kpi kpi-on"><span class="kpi-l">Conversión</span><span class="kpi-v">+18<i>%</i></span></div>
+        </div>
+        <div class="dash-chart">
+          <svg viewBox="0 0 420 130" width="100%" height="118" preserveAspectRatio="none">
+            <defs><linearGradient id="ar" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0" stop-color="#FB600E" stop-opacity=".20"/>
+              <stop offset="1" stop-color="#FB600E" stop-opacity="0"/>
+            </linearGradient></defs>
+            <line x1="0" y1="34" x2="420" y2="34" stroke="#EEF1F6" stroke-width="1"/>
+            <line x1="0" y1="68" x2="420" y2="68" stroke="#EEF1F6" stroke-width="1"/>
+            <line x1="0" y1="102" x2="420" y2="102" stroke="#EEF1F6" stroke-width="1"/>
+            <path d="M0,110 C50,102 80,90 130,92 C180,94 210,66 270,58 C325,51 365,30 410,18 L410,130 L0,130 Z" fill="url(#ar)"/>
+            <path d="M0,110 C50,102 80,90 130,92 C180,94 210,66 270,58 C325,51 365,30 410,18" fill="none" stroke="#FB600E" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+            <circle cx="410" cy="18" r="5" fill="#FB600E" stroke="#fff" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="dash-foot-h">Pagos confirmados</div>
+        <div class="pay"><span class="pdot"></span><div class="ptrack"><div class="pfill" style="width:64%"></div></div><span class="pamt">+€1.240</span></div>
+        <div class="pay"><span class="pdot"></span><div class="ptrack"><div class="pfill" style="width:44%"></div></div><span class="pamt">+€680</span></div>
+        <div class="pay"><span class="pdot"></span><div class="ptrack"><div class="pfill" style="width:78%"></div></div><span class="pamt">+€2.150</span></div>
       </div>
-
-      <div class="vcard vc-conv">
-        <div class="vc-label">Conversión</div>
-        <div class="vc-big">+18<span class="acc">%</span></div>
-        <svg width="110" height="40" viewBox="0 0 110 40">
-          <rect x="2" y="26" width="14" height="14" rx="3" fill="#C3D0E6"/>
-          <rect x="22" y="20" width="14" height="20" rx="3" fill="#A9BCDD"/>
-          <rect x="42" y="22" width="14" height="18" rx="3" fill="#C3D0E6"/>
-          <rect x="62" y="12" width="14" height="28" rx="3" fill="#8AA6D6"/>
-          <rect x="82" y="4" width="14" height="36" rx="3" fill="#FB600E"/>
-        </svg>
-      </div>
+      <img class="dash-peng" src="aury-hero.png" alt="Aury, tu copiloto de crecimiento"/>
     </div>
   </div>
 </header>
