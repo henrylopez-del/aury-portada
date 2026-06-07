@@ -121,7 +121,15 @@ a{text-decoration:none;color:inherit;}
 /* hero v4 — copia literal del collage: pinguino + cards translucidas */
 .hero-visual{position:relative;display:flex;align-items:center;justify-content:center;}
 .hero-peng2{height:clamp(440px,70vh,680px);width:auto;z-index:2;filter:drop-shadow(0 26px 44px rgba(11,27,60,.16));}
-.gcard{position:absolute;background:rgba(255,255,255,.66);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.9);box-shadow:0 18px 44px rgba(11,27,60,.12);border-radius:16px;padding:14px 16px;z-index:3;}
+.gcard{position:absolute;background:#fff;border:1px solid var(--line);box-shadow:0 6px 16px rgba(11,27,60,.05),0 26px 56px rgba(11,27,60,.12);border-radius:16px;padding:15px 16px;z-index:3;}
+.gc-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;}
+.gc-pill{font-size:.6rem;font-weight:600;color:var(--slate-l);background:var(--paper);border:1px solid var(--line);padding:3px 8px;border-radius:100px;}
+.gc-row{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
+.gc-num{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.4rem;color:var(--ink);line-height:1;}
+.gc-delta{font-size:.62rem;font-weight:700;padding:3px 7px;border-radius:100px;display:inline-flex;align-items:center;gap:3px;}
+.gc-delta.up{background:var(--green-l);color:var(--green);}
+.gc-cap{font-size:.64rem;color:var(--slate-l);margin-top:8px;}
+.gc-area{display:block;}
 .gc-label{font-size:.74rem;color:var(--slate);font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:6px;}
 .gc-dot{width:8px;height:8px;border-radius:50%;background:var(--orange);}
 .gc-val{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.2rem;color:var(--ink);line-height:1;}
@@ -361,34 +369,43 @@ a{text-decoration:none;color:inherit;}
       <img class="hero-peng2" src="aury-hero.png" alt="Aury, tu copiloto de crecimiento"/>
 
       <div class="gcard gc-crec">
-        <div class="gc-label">Crecimiento</div>
-        <svg width="196" height="72" viewBox="0 0 196 72" fill="none">
-          <polyline points="6,62 42,52 78,56 114,36 150,42 182,14" stroke="#8FA2DA" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M170,12 L184,12 L184,26" fill="none" stroke="#8FA2DA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <div class="gc-top"><span class="gc-label">Crecimiento</span><span class="gc-pill">30 días</span></div>
+        <div class="gc-row"><span class="gc-num">+38%</span><span class="gc-delta up">▲ 12%</span></div>
+        <svg class="gc-area" width="100%" height="54" viewBox="0 0 210 54" preserveAspectRatio="none">
+          <defs><linearGradient id="ga" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#8FA2DA" stop-opacity=".30"/><stop offset="1" stop-color="#8FA2DA" stop-opacity="0"/></linearGradient></defs>
+          <line x1="0" y1="18" x2="210" y2="18" stroke="#EEF1F6" stroke-width="1"/>
+          <line x1="0" y1="36" x2="210" y2="36" stroke="#EEF1F6" stroke-width="1"/>
+          <path d="M2,44 C30,40 50,34 80,36 C110,38 130,20 160,16 C185,13 200,8 208,5 L208,54 L2,54 Z" fill="url(#ga)"/>
+          <path d="M2,44 C30,40 50,34 80,36 C110,38 130,20 160,16 C185,13 200,8 208,5" fill="none" stroke="#8FA2DA" stroke-width="2.5" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+          <circle cx="208" cy="5" r="3.5" fill="#8FA2DA"/>
         </svg>
       </div>
 
       <div class="gcard gc-aud">
-        <div class="gc-label"><span class="gc-dot"></span>Audiencia</div>
+        <div class="gc-top"><span class="gc-label"><span class="gc-dot"></span>Audiencia</span></div>
         <div class="gc-donut">
           <svg width="72" height="72" viewBox="0 0 72 72">
-            <circle cx="36" cy="36" r="28" fill="none" stroke="#E6E9F2" stroke-width="8"/>
+            <circle cx="36" cy="36" r="28" fill="none" stroke="#EEF1F6" stroke-width="8"/>
             <circle cx="36" cy="36" r="28" fill="none" stroke="#8FA2DA" stroke-width="8" stroke-linecap="round" stroke-dasharray="175.9" stroke-dashoffset="120" transform="rotate(-90 36 36)"/>
           </svg>
           <span class="gc-donut-val">+32%</span>
         </div>
+        <div class="gc-cap">+1.240 nuevos este mes</div>
       </div>
 
       <div class="gcard gc-conv">
-        <div class="gc-label">Conversión</div>
-        <div class="gc-val">+18<span class="acc">%</span></div>
-        <svg width="108" height="40" viewBox="0 0 108 40" style="margin-top:8px">
-          <rect x="2" y="26" width="13" height="14" rx="3" fill="#CBD3EC"/>
-          <rect x="21" y="20" width="13" height="20" rx="3" fill="#B3BEE6"/>
-          <rect x="40" y="22" width="13" height="18" rx="3" fill="#CBD3EC"/>
-          <rect x="59" y="12" width="13" height="28" rx="3" fill="#9DABDD"/>
-          <rect x="78" y="4" width="13" height="36" rx="3" fill="#8FA2DA"/>
+        <div class="gc-top"><span class="gc-label">Conversión</span><span class="gc-delta up">▲ 4.2%</span></div>
+        <div class="gc-num">+18%</div>
+        <svg width="118" height="38" viewBox="0 0 118 38" style="margin-top:10px">
+          <line x1="0" y1="37" x2="118" y2="37" stroke="#EEF1F6" stroke-width="1"/>
+          <rect x="2" y="23" width="13" height="14" rx="3" fill="#CBD3EC"/>
+          <rect x="22" y="17" width="13" height="20" rx="3" fill="#B3BEE6"/>
+          <rect x="42" y="19" width="13" height="18" rx="3" fill="#CBD3EC"/>
+          <rect x="62" y="9" width="13" height="28" rx="3" fill="#9DABDD"/>
+          <rect x="82" y="3" width="13" height="34" rx="3" fill="#8FA2DA"/>
+          <rect x="102" y="13" width="13" height="24" rx="3" fill="#CBD3EC"/>
         </svg>
+        <div class="gc-cap">vs. mes anterior</div>
       </div>
     </div>
   </div>
