@@ -132,6 +132,16 @@ a{text-decoration:none;color:inherit;}
 .gc-aud{top:30%;right:2%;animation:bob 5.4s ease-in-out infinite -1.6s;}
 .gc-conv{bottom:6%;right:6%;animation:bob 5.8s ease-in-out infinite -.9s;}
 
+/* social proof en hero */
+.hero-proof{display:flex;align-items:center;gap:9px;margin-top:22px;font-size:.82rem;color:var(--slate-l);font-weight:500;}
+.hero-proof .stars{color:var(--orange);letter-spacing:1px;font-size:.85rem;}
+/* barra de integraciones (señal SaaS) */
+.trust{padding:30px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper2);}
+.trust-label{text-align:center;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--slate-l);margin-bottom:18px;}
+.trust-logos{display:flex;justify-content:center;align-items:center;gap:clamp(20px,4vw,44px);flex-wrap:wrap;}
+.tlogo{display:flex;align-items:center;gap:9px;font-family:'Poppins',sans-serif;font-weight:700;font-size:1rem;color:var(--slate);}
+.tg{width:30px;height:30px;border-radius:8px;background:var(--paper);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--ink);flex-shrink:0;}
+
 /* ── SPLIT 50/50 ── */
 .split{padding:30px 0 96px;background:var(--paper);}
 .split-head{text-align:center;max-width:640px;margin:0 auto 46px;}
@@ -332,6 +342,7 @@ a{text-decoration:none;color:inherit;}
         <a href="mailto:hola@aury.tech" class="btn btn-primary btn-lg">Solicitar demo</a>
         <a href="#tech" class="btn-textlink">Ver cómo funciona →</a>
       </div>
+      <div class="hero-proof"><span class="stars">★★★★★</span> Negocios en España y LATAM ya crecen con Aury</div>
     </div>
 
     <div class="hero-visual reveal d1">
@@ -370,6 +381,20 @@ a{text-decoration:none;color:inherit;}
     </div>
   </div>
 </header>
+
+<!-- TRUST / INTEGRACIONES (señal SaaS) -->
+<section class="trust">
+  <div class="wrap">
+    <p class="trust-label">El motor que conecta todo tu stack de adquisición</p>
+    <div class="trust-logos">
+      <div class="tlogo"><span class="tg">∞</span>Meta Ads</div>
+      <div class="tlogo"><span class="tg">G</span>Google Ads</div>
+      <div class="tlogo"><span class="tg">✆</span>WhatsApp</div>
+      <div class="tlogo"><span class="tg">◎</span>CRM · GHL</div>
+      <div class="tlogo"><span class="tg">⚙</span>Make</div>
+    </div>
+  </div>
+</section>
 
 <!-- SPLIT 50/50 -->
 <section class="split">
