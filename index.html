@@ -134,9 +134,14 @@ a{text-decoration:none;color:inherit;}
 .gc-dot{width:9px;height:9px;border-radius:50%;background:var(--orange);}
 .gc-donut{position:relative;width:88px;height:88px;display:flex;align-items:center;justify-content:center;}
 .gc-donut-val{position:absolute;font-family:'Poppins',sans-serif;font-weight:800;font-size:1.05rem;color:var(--ink);}
-.gc-crec{top:0;left:-7%;width:252px;animation:bob 6s ease-in-out infinite;}
-.gc-aud{top:34%;right:-8%;animation:bob 5.4s ease-in-out infinite -1.6s;}
-.gc-conv{bottom:1%;right:0;width:204px;animation:bob 5.8s ease-in-out infinite -.9s;}
+.gc-crec{top:-2%;left:2%;width:250px;animation:bob 6s ease-in-out infinite;}
+.gc-aud{top:40%;right:-7%;animation:bob 5.4s ease-in-out infinite -1.6s;}
+.gc-conv{bottom:2%;left:-4%;width:206px;animation:bob 5.8s ease-in-out infinite -.9s;}
+/* geometría de fondo */
+.hero-halo{position:absolute;top:48%;left:50%;transform:translate(-50%,-50%);width:clamp(420px,46vh,560px);height:clamp(420px,46vh,560px);border-radius:50%;background:radial-gradient(circle,rgba(143,162,218,.16),rgba(143,162,218,.04) 55%,transparent 72%);z-index:0;}
+.hero-orbit{position:absolute;top:48%;left:50%;transform:translate(-50%,-50%);width:clamp(440px,52vh,620px);height:clamp(440px,52vh,620px);border-radius:50%;border:1.5px dashed rgba(143,162,218,.4);z-index:0;animation:spin 60s linear infinite;}
+.hero-orbit2{width:clamp(330px,40vh,470px);height:clamp(330px,40vh,470px);border-style:solid;border-color:rgba(143,162,218,.18);animation:spin 90s linear infinite reverse;}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg);}}
 
 /* social proof en hero */
 .hero-proof{display:flex;align-items:center;gap:9px;margin-top:22px;font-size:.82rem;color:var(--slate-l);font-weight:500;}
@@ -369,6 +374,9 @@ a{text-decoration:none;color:inherit;}
     </div>
 
     <div class="hero-visual reveal d1">
+      <div class="hero-halo"></div>
+      <div class="hero-orbit"></div>
+      <div class="hero-orbit hero-orbit2"></div>
       <img class="hero-peng2" src="aury-hero.png" alt="Aury, tu copiloto de crecimiento"/>
 
       <div class="gcard gc-crec">
