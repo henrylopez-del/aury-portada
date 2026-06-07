@@ -81,7 +81,7 @@ a{text-decoration:none;color:inherit;}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;}
 .kick{display:inline-flex;align-items:center;gap:9px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:24px;}
 .kick::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--orange);}
-.hero h1{font-weight:800;font-size:clamp(2.5rem,5vw,4.1rem);line-height:1.04;color:var(--ink);margin-bottom:22px;}
+.hero h1{font-weight:700;font-size:clamp(2.3rem,3.9vw,3.5rem);line-height:1.1;color:var(--ink);margin-bottom:22px;max-width:14ch;}
 .hero p.lead{font-size:1.12rem;color:var(--slate);line-height:1.6;max-width:440px;margin-bottom:34px;}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
 .hero-trust{display:flex;gap:26px;margin-top:40px;padding-top:28px;border-top:1px solid var(--line);flex-wrap:wrap;}
@@ -104,6 +104,20 @@ a{text-decoration:none;color:inherit;}
 .cf-dot{width:9px;height:9px;border-radius:50%;background:var(--orange);}
 .spark{margin-top:10px;}
 @keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(-11px);}}
+/* hero v2 — cards estilo mockup */
+.btn-textlink{font-weight:600;font-size:1rem;color:var(--ink);display:inline-flex;align-items:center;gap:7px;padding:13px 6px;transition:color .2s,gap .2s;}
+.btn-textlink:hover{color:var(--orange);gap:11px;}
+.hero-panel{position:absolute;width:74%;height:60%;left:13%;top:16%;background:linear-gradient(160deg,rgba(255,255,255,.75),rgba(224,230,240,.30));border:1px solid rgba(255,255,255,.7);border-radius:28px;z-index:1;}
+.vcard{position:absolute;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 14px 38px rgba(11,27,60,.12);padding:14px 16px;z-index:3;}
+.vc-label{font-size:.74rem;color:var(--slate-l);font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+.vc-dot{width:9px;height:9px;border-radius:50%;background:var(--orange);}
+.vc-big{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.45rem;color:var(--ink);line-height:1;margin-bottom:8px;}
+.vc-big .acc{color:var(--orange);}
+.vc-donut{position:relative;display:flex;align-items:center;justify-content:center;width:76px;height:76px;}
+.vc-donut-val{position:absolute;font-family:'Poppins',sans-serif;font-weight:800;font-size:.9rem;color:var(--ink);}
+.vc-crec{top:0;left:-7%;animation:bob 5s ease-in-out infinite;}
+.vc-aud{top:22%;right:-7%;animation:bob 6s ease-in-out infinite -1.5s;}
+.vc-conv{bottom:6%;left:-1%;animation:bob 5.5s ease-in-out infinite -.8s;}
 
 /* ── SPLIT 50/50 ── */
 .split{padding:30px 0 96px;background:var(--paper);}
@@ -298,37 +312,49 @@ a{text-decoration:none;color:inherit;}
 <header class="hero">
   <div class="wrap hero-grid">
     <div class="hero-text reveal">
-      <div class="kick">Crecimiento inteligente</div>
-      <h1>Convierte datos en<br/>crecimiento <span class="acc">inteligente.</span></h1>
-      <p class="lead">Aury combina performance marketing con atribución real y formación en automatización. Tus ideas al frente. Los datos, de tu lado.</p>
+      <div class="kick">AI-Powered Growth Intelligence</div>
+      <h1>Convierte datos en crecimiento <span class="acc">inteligente.</span></h1>
+      <p class="lead">Aury combina inteligencia artificial y análisis avanzado para ayudarte a tomar decisiones que impulsan resultados.</p>
       <div class="hero-ctas">
-        <a href="mailto:hola@aury.tech" class="btn btn-orange btn-lg">Solicitar demo</a>
-        <a href="#cursos" class="btn btn-ghost btn-lg">Ver cursos gratis →</a>
-      </div>
-      <div class="hero-trust">
-        <div><div class="ht-n">+208<span class="acc">%</span></div><div class="ht-l">impresiones en<br/>cliente real</div></div>
-        <div><div class="ht-n">−55<span class="acc">%</span></div><div class="ht-l">costo por clic<br/>en 6 meses</div></div>
-        <div><div class="ht-n">0€</div><div class="ht-l">para empezar<br/>con los cursos</div></div>
+        <a href="mailto:hola@aury.tech" class="btn btn-primary btn-lg">Solicitar demo</a>
+        <a href="#tech" class="btn-textlink">Ver cómo funciona →</a>
       </div>
     </div>
 
     <div class="hero-visual reveal d1">
+      <div class="hero-panel"></div>
       <img class="hero-peng" src="aury-hero.png" alt="Aury, tu copiloto de crecimiento"/>
-      <div class="card-float cf-1">
-        <div class="cf-label"><span class="cf-dot"></span>Audiencia</div>
-        <div class="cf-val">+32<span class="acc">%</span></div>
-      </div>
-      <div class="card-float cf-2">
-        <div class="cf-label">Crecimiento</div>
-        <div class="cf-val">+38<span class="acc">%</span></div>
-        <svg class="spark" width="156" height="40" viewBox="0 0 156 40" fill="none">
-          <polyline points="2,34 26,30 50,32 78,22 104,24 130,12 154,6" stroke="#F26A1B" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="154" cy="6" r="3.5" fill="#F26A1B"/>
+
+      <div class="vcard vc-crec">
+        <div class="vc-label">Crecimiento</div>
+        <div class="vc-big">+38<span class="acc">%</span></div>
+        <svg width="190" height="56" viewBox="0 0 190 56" fill="none">
+          <polyline points="4,46 36,40 68,42 100,28 132,30 164,14 186,6" stroke="#8AA6D6" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="186" cy="6" r="4.5" fill="#FB600E"/>
         </svg>
       </div>
-      <div class="card-float cf-3">
-        <div class="cf-label">Conversión</div>
-        <div class="cf-val">+18<span class="acc">%</span></div>
+
+      <div class="vcard vc-aud">
+        <div class="vc-label"><span class="vc-dot"></span>Audiencia</div>
+        <div class="vc-donut">
+          <svg width="76" height="76" viewBox="0 0 76 76">
+            <circle cx="38" cy="38" r="30" fill="none" stroke="#E3E7EE" stroke-width="9"/>
+            <circle cx="38" cy="38" r="30" fill="none" stroke="#8AA6D6" stroke-width="9" stroke-linecap="round" stroke-dasharray="188.5" stroke-dashoffset="128" transform="rotate(-90 38 38)"/>
+          </svg>
+          <span class="vc-donut-val">+32%</span>
+        </div>
+      </div>
+
+      <div class="vcard vc-conv">
+        <div class="vc-label">Conversión</div>
+        <div class="vc-big">+18<span class="acc">%</span></div>
+        <svg width="110" height="40" viewBox="0 0 110 40">
+          <rect x="2" y="26" width="14" height="14" rx="3" fill="#C3D0E6"/>
+          <rect x="22" y="20" width="14" height="20" rx="3" fill="#A9BCDD"/>
+          <rect x="42" y="22" width="14" height="18" rx="3" fill="#C3D0E6"/>
+          <rect x="62" y="12" width="14" height="28" rx="3" fill="#8AA6D6"/>
+          <rect x="82" y="4" width="14" height="36" rx="3" fill="#FB600E"/>
+        </svg>
       </div>
     </div>
   </div>
