@@ -77,8 +77,8 @@ a{text-decoration:none;color:inherit;}
 .mm-x{position:absolute;top:22px;right:26px;background:none;border:none;color:var(--on-navy);font-size:1.6rem;cursor:pointer;}
 
 /* ── HERO ── */
-.hero{min-height:100vh;display:flex;align-items:center;padding:86px 0 28px;background:radial-gradient(120% 90% at 88% 0%,rgba(242,106,27,.06) 0%,transparent 55%),var(--paper);}
-.hero-grid{display:grid;grid-template-columns:1fr 1.08fr;gap:24px;align-items:center;width:100%;}
+.hero{padding:128px 0 76px;background:radial-gradient(120% 90% at 88% 0%,rgba(242,106,27,.06) 0%,transparent 55%),var(--paper);}
+.hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:center;width:100%;}
 .kick{display:inline-flex;align-items:center;gap:9px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:24px;}
 .kick::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--orange);}
 .hero h1{font-weight:700;font-size:clamp(2.3rem,3.9vw,3.5rem);line-height:1.1;color:var(--ink);margin-bottom:22px;max-width:14ch;}
@@ -119,8 +119,8 @@ a{text-decoration:none;color:inherit;}
 .vc-aud{top:22%;right:-7%;animation:bob 6s ease-in-out infinite -1.5s;}
 .vc-conv{bottom:6%;left:-1%;animation:bob 5.5s ease-in-out infinite -.8s;}
 /* hero v4 — copia literal del collage: pinguino + cards translucidas */
-.hero-visual{position:relative;display:flex;align-items:center;justify-content:center;}
-.hero-peng2{height:clamp(576px,91vh,864px);width:auto;z-index:2;filter:drop-shadow(0 26px 44px rgba(11,27,60,.16));}
+.hero-visual{position:relative;display:flex;align-items:center;justify-content:center;height:clamp(500px,62vh,620px);}
+.hero-peng2{height:100%;width:auto;z-index:2;filter:drop-shadow(0 26px 44px rgba(11,27,60,.16));}
 .gpos{position:absolute;transform:translate(-50%,-50%);z-index:3;}
 .gcard{position:relative;background:#fff;border:1px solid var(--line);box-shadow:0 8px 20px rgba(11,27,60,.06),0 32px 64px rgba(11,27,60,.14);border-radius:18px;padding:20px 22px;}
 .gc-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;}
@@ -376,11 +376,9 @@ a{text-decoration:none;color:inherit;}
 
     <div class="hero-visual reveal d1">
       <div class="hero-halo"></div>
-      <div class="hero-orbit"></div>
-      <div class="hero-orbit hero-orbit2"></div>
       <img class="hero-peng2" src="aury-hero.png" alt="Aury, tu copiloto de crecimiento"/>
 
-      <div class="gpos" style="top:11%;left:60%">
+      <div class="gpos" style="top:7%;left:33%">
       <div class="gcard gc-crec">
         <div class="gc-top"><span class="gc-label">Crecimiento</span><span class="gc-pill">30 días</span></div>
         <div class="gc-row"><span class="gc-num">+38%</span><span class="gc-delta up">▲ 12%</span></div>
@@ -395,7 +393,7 @@ a{text-decoration:none;color:inherit;}
       </div>
       </div>
 
-      <div class="gpos" style="top:64%;left:92%">
+      <div class="gpos" style="top:45%;left:94%">
       <div class="gcard gc-aud">
         <div class="gc-top"><span class="gc-label"><span class="gc-dot"></span>Audiencia</span></div>
         <div class="gc-donut">
@@ -409,7 +407,7 @@ a{text-decoration:none;color:inherit;}
       </div>
       </div>
 
-      <div class="gpos" style="top:82%;left:26%">
+      <div class="gpos" style="top:90%;left:64%">
       <div class="gcard gc-conv">
         <div class="gc-top"><span class="gc-label">Conversión</span><span class="gc-delta up">▲ 4.2%</span></div>
         <div class="gc-num">+18%</div>
